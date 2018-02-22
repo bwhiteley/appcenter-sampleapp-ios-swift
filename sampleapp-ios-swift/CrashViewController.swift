@@ -34,7 +34,7 @@ class CrashViewController: UIViewController {
                                       style: UIAlertActionStyle.destructive,
                                       handler: { _ in alert.dismiss(animated: true, completion: nil)
                                           // generate test crash
-                                          fatalError()
+                                          fatalError("Yo, you crashed.")
         }))
 
         present(alert, animated: true, completion: nil)
