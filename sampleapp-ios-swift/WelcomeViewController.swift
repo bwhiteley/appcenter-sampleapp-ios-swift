@@ -28,6 +28,12 @@ class WelcomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func readyButtonTapped(_ sender: Any) {
+        let i: Int? = nil
+        let s: Int = 1 + i!
+        print(s)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

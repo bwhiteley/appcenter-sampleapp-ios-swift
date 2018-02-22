@@ -342,6 +342,9 @@
                                             <constraint firstAttribute="width" constant="150" id="x5f-Kn-IcW"/>
                                         </constraints>
                                         <state key="normal" title="Ready"/>
+                                        <connections>
+                                            <action selector="readyButtonTapped:" destination="4H3-4D-a5H" eventType="touchUpInside" id="2wZ-6J-rPu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.16282719373703003" green="0.16298320889472961" blue="0.16285133361816406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
