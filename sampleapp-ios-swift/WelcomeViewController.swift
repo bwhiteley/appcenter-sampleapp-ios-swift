@@ -35,7 +35,9 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func crashTapped(_ sender: Any) {
-        fatalError("It Crashed!")
+        
+        
+        fatalError("It Really Crashed!")
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
