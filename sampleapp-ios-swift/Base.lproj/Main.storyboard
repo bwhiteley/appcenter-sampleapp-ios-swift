@@ -346,9 +346,20 @@
                                             <action selector="readyButtonTapped:" destination="4H3-4D-a5H" eventType="touchUpInside" id="2wZ-6J-rPu"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="780-OJ-hD8">
+                                        <rect key="frame" x="147" y="318" width="120" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="4iN-iB-rKN"/>
+                                        </constraints>
+                                        <state key="normal" title="Crash"/>
+                                        <connections>
+                                            <action selector="crashTapped:" destination="4H3-4D-a5H" eventType="touchUpInside" id="isG-Ki-gEc"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.16282719373703003" green="0.16298320889472961" blue="0.16285133361816406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="780-OJ-hD8" firstAttribute="centerX" secondItem="ajf-uQ-6mS" secondAttribute="centerX" id="7HB-bH-wI4"/>
                                     <constraint firstItem="I9U-5j-epC" firstAttribute="leading" secondItem="M5e-MD-NWC" secondAttribute="leading" constant="29" id="CHJ-Rh-Fjq"/>
                                     <constraint firstItem="ajf-uQ-6mS" firstAttribute="centerX" secondItem="M5e-MD-NWC" secondAttribute="centerX" id="HL9-0a-cbS"/>
                                     <constraint firstItem="BJv-EU-0bl" firstAttribute="top" secondItem="M5e-MD-NWC" secondAttribute="top" constant="22" id="Kzs-Aj-5g5"/>
@@ -356,6 +367,7 @@
                                     <constraint firstItem="BJv-EU-0bl" firstAttribute="leading" secondItem="I9U-5j-epC" secondAttribute="leading" id="SKW-gK-hoe"/>
                                     <constraint firstAttribute="bottom" secondItem="ajf-uQ-6mS" secondAttribute="bottom" constant="192" id="X19-8E-3kx"/>
                                     <constraint firstItem="I9U-5j-epC" firstAttribute="centerX" secondItem="M5e-MD-NWC" secondAttribute="centerX" id="bGy-wt-9KJ"/>
+                                    <constraint firstItem="ajf-uQ-6mS" firstAttribute="top" secondItem="780-OJ-hD8" secondAttribute="bottom" constant="8" id="nSg-3T-uCU"/>
                                     <constraint firstItem="BJv-EU-0bl" firstAttribute="trailing" secondItem="I9U-5j-epC" secondAttribute="trailing" id="uuy-oq-Z9D"/>
                                 </constraints>
                             </view>

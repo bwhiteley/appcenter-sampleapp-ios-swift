@@ -34,6 +34,9 @@ class WelcomeViewController: UIViewController {
         print(s)
     }
     
+    @IBAction func crashTapped(_ sender: Any) {
+        fatalError("It Crashed!")
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
