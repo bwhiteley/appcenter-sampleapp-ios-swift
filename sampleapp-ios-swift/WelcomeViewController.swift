@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AppCenterAnalytics
 
 let groupName = "group.com.swift-bit.MSAppCenterTest"
 
@@ -29,6 +30,8 @@ class WelcomeViewController: UIViewController {
     }
 
     @IBAction func readyButtonTapped(_ sender: Any) {
+        MSAnalytics.trackEvent("Ready button tapped")
+
         let i: Int? = nil
         let s: Int = 1 + i!
         print(s)
@@ -36,7 +39,8 @@ class WelcomeViewController: UIViewController {
     
     @IBAction func crashTapped(_ sender: Any) {
         
-        
+        MSAnalytics.trackEvent("Crash button tapped", withProperties: ["screen": "welcome"])
+
         fatalError("It Really Crashed!")
     }
     override func didReceiveMemoryWarning() {

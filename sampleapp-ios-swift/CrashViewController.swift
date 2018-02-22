@@ -1,5 +1,6 @@
 
 import UIKit
+import AppCenterAnalytics
 
 class CrashViewController: UIViewController {
 
@@ -34,7 +35,8 @@ class CrashViewController: UIViewController {
                                       style: UIAlertActionStyle.destructive,
                                       handler: { _ in alert.dismiss(animated: true, completion: nil)
                                           // generate test crash
-                                          fatalError("Yo, you crashed.")
+                                        MSAnalytics.trackEvent("Crash button tapped", withProperties: ["screen": "cfrash"])
+                             fatalError("Yo, you crashed.")
         }))
 
         present(alert, animated: true, completion: nil)
