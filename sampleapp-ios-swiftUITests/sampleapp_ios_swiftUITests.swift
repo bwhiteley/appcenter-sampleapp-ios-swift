@@ -1,8 +1,12 @@
 
 import XCTest
+import AppCenterXCUITestExtensions
+import UIKit
+
+
 
 class sampleapp_ios_swiftUITests: XCTestCase {
-    let app = XCUIApplication()
+    let app = ACTLaunch.launch(XCUIApplication())!
     override func setUp() {
         super.setUp()
         // In UI tests it is usually best to stop immediately when a failure occurs.
@@ -18,7 +22,8 @@ class sampleapp_ios_swiftUITests: XCTestCase {
     func testSwipeUntilCrashesPage() {
         // Assert that the crash button exists
         let window = app.windows.element(boundBy: 0)
-        let fatalErrorButtonQuery = app.buttons.matching(identifier: "fatalErrorButton")
-        XCTAssert(window.frame.contains(fatalErrorButtonQuery.accessibilityFrame))
+        let readyButtonQuery = app.buttons.matching(identifier: "ready")
+        let buttonCount = app.buttons.count
+        XCTAssertEqual(buttonCount, 1)
     }
 }

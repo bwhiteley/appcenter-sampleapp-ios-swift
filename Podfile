@@ -11,6 +11,7 @@ pod 'AppCenter'
   target 'sampleapp-ios-swiftUITests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'AppCenterXCUITestExtensions'
   end
 
 end

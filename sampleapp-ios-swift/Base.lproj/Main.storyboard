@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OYS-mz-9OC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OYS-mz-9OC">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -301,7 +301,7 @@
         <!--welcomeViewController-->
         <scene sceneID="3cY-QH-l2L">
             <objects>
-                <viewController restorationIdentifier="welcomeViewController" storyboardIdentifier="welcomeViewController" title="welcomeViewController" id="4H3-4D-a5H" sceneMemberID="viewController">
+                <viewController restorationIdentifier="welcomeViewController" storyboardIdentifier="welcomeViewController" title="welcomeViewController" id="4H3-4D-a5H" customClass="WelcomeViewController" customModule="sampleapp_ios_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9wq-Q8-kS3"/>
                         <viewControllerLayoutGuide type="bottom" id="wnu-XQ-xL6"/>
@@ -335,13 +335,23 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajf-uQ-6mS">
+                                        <rect key="frame" x="132" y="356" width="150" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="ready"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="x5f-Kn-IcW"/>
+                                        </constraints>
+                                        <state key="normal" title="Ready"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.16282719373703003" green="0.16298320889472961" blue="0.16285133361816406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="I9U-5j-epC" firstAttribute="leading" secondItem="M5e-MD-NWC" secondAttribute="leading" constant="29" id="CHJ-Rh-Fjq"/>
+                                    <constraint firstItem="ajf-uQ-6mS" firstAttribute="centerX" secondItem="M5e-MD-NWC" secondAttribute="centerX" id="HL9-0a-cbS"/>
                                     <constraint firstItem="BJv-EU-0bl" firstAttribute="top" secondItem="M5e-MD-NWC" secondAttribute="top" constant="22" id="Kzs-Aj-5g5"/>
                                     <constraint firstItem="I9U-5j-epC" firstAttribute="top" secondItem="M5e-MD-NWC" secondAttribute="top" constant="153" id="NaF-9U-u1o"/>
                                     <constraint firstItem="BJv-EU-0bl" firstAttribute="leading" secondItem="I9U-5j-epC" secondAttribute="leading" id="SKW-gK-hoe"/>
+                                    <constraint firstAttribute="bottom" secondItem="ajf-uQ-6mS" secondAttribute="bottom" constant="192" id="X19-8E-3kx"/>
                                     <constraint firstItem="I9U-5j-epC" firstAttribute="centerX" secondItem="M5e-MD-NWC" secondAttribute="centerX" id="bGy-wt-9KJ"/>
                                     <constraint firstItem="BJv-EU-0bl" firstAttribute="trailing" secondItem="I9U-5j-epC" secondAttribute="trailing" id="uuy-oq-Z9D"/>
                                 </constraints>
@@ -359,10 +369,13 @@
                             <constraint firstItem="M5e-MD-NWC" firstAttribute="leading" secondItem="6I8-HA-vhy" secondAttribute="leading" id="s7L-JG-2b1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="readyButton" destination="ajf-uQ-6mS" id="cmR-yv-8Mt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbt-Me-0Vg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="-694"/>
+            <point key="canvasLocation" x="1111.5942028985507" y="-694.56521739130437"/>
         </scene>
         <!--Crashes-->
         <scene sceneID="Uek-HK-ge3">
@@ -404,7 +417,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsp-Uf-2bG">
                                         <rect key="frame" x="29" y="364" width="356" height="60"/>
                                         <color key="backgroundColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="fatalErrorButton"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="fatalErrorButtonYo"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="5Cx-Cr-O1P"/>
                                         </constraints>
