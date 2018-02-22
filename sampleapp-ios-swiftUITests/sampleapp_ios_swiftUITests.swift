@@ -24,6 +24,6 @@ class sampleapp_ios_swiftUITests: XCTestCase {
         let window = app.windows.element(boundBy: 0)
         let readyButtonQuery = app.buttons.matching(identifier: "ready")
         let buttonCount = app.buttons.count
-        XCTAssertEqual(buttonCount, 1)
+        XCTAssertEqual(buttonCount, 2)
     }
 }
